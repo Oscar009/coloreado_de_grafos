@@ -1,31 +1,8 @@
 * {
   margin: auto;
+}
+
+table,td {
+	border: 1px solid black;
   align-items: center;
-}
-
-.titulo{
-  display: flex;
-  justify-content: center;
-  background-color: #2A706B;
-  border-color: black;
-  border-width: 2px;
-  border-style: solid;
-}
-
-.contenido{
-  background-color: #46BDB5;
-  display: flex;
-  flex-grow: 2;
-  border-style: none solid outset;
-}
-
-.instrucciones{
-  margin: 5px;
-  align-self: flex-start;
-}
-
-.descripcion_algoritmo{
-  margin: 5px;
-  align-self: flex-start;
-  border-left: 2px solid;
 }

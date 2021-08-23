@@ -4,51 +4,8 @@
     <meta charset="utf-8">
     <title>Coloreado de grafos</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js" charset="utf-8"></script>
+    <script type="text/javascript" src="app.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="titulo">
-      <h1>Coloreado de grafos</h1>
-      <h3>Oscar Noe Ortiz Barba <br> Diseño de algoritmos</h3>
-    </div>
-    <div class="contenido">
-      <div class="instrucciones">
-        <br>
-        <h2>Instrucciones</h2>
-        <br>
-        <p><b>Entrada:</b> Grafo G (Vértices, Aristas). Número de colores. Nombres de colores asignando el orden prioridad.
-          (Deberás escoger cómo será la entrada de un grafo).
-        </p>
-        <br>
-        <p><b>Salida:</b> Coloreado  posible / Coloreado no posible. En caso de ser posible indicar la asignación de vértices con los colores asignados,
-          en caso de que no sea posible indicar el conflicto. Presentar salida gráfica opcional.</p>
-          <br>
-      </div>
-      <div class="descripcion_algoritmo">
-        <h2>Algoritmo</h2>
-        <br>
-        <ol>
-          <li>Ordenar los vértices de G por grado.</li>
-          <li>Para los nodos de grado igual, obtener su grado de error:
-            <br>
-            grado de error = Grado + #_de_nodos_adyacentes_con_grado_igual_o_superior
-            <br>Se ordenan de acuerdo al grado de error.
-          </li>
-          <li>Se considera el orden de  los colores a utilizar, el número de colores y orden se determina al inicio del programa.
-            En el siguiente ejemplo se muestran 4 colores con la prioridad siguiente:
-            <ol>
-              <li>C1 = Blue (B)</li>
-              <li>C2 = Red (R)</li>
-              <li>C3 = Green (G)</li>
-              <li>C4 = Yellow (Y)</li>
-            </ol>
-          </li>
-          <li>Se colorean los nodos considerando el orden de prioridades de color y el acomodo dependiendo el grado de error del algoritmo.
-          </li>
-          <li>Termina el algoritmo cuando  todos los vértices son coloreados  o cuando falla para colorear algún vértice debido a la falta de colores.
-          </li>
-        </ol>
-      </div>
-    </div>
   </body>
 </html>
