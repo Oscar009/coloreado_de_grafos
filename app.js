@@ -16,10 +16,14 @@ function grafo(v, msj){
   document.write(msj);
 }
 
+function agregarGradoError(g){
+
+}
+
 function mostrarGrafo(g){
   console.log(g.v);
 
-  document.write("<table><th>id_nodo</th><th>Nombre</th><th>Grado</th><th>Grado de error</th><th>Color</th><th>Adyacencia</th>");
+  document.write("<table><th>id_nodo</th><th>Nombre</th><th>Grado</th><th>Grado de error</th><th>Color</th><th>Adyacencia(id)</th>");
 
   for(var i = 0; i<g.v.length; i++){
     document.write("<tr><td>" + g.v[i].id_nodo +"</td>");
@@ -29,7 +33,7 @@ function mostrarGrafo(g){
     document.write("<td>" + g.v[i].color + "</td>");
     document.write("<td>");
     for(var j = 0;j<g.v[i].ady.length;j++){
-      document.write(g.v[i].ady[j]);
+      document.write(g.v[i].ady[j] + " ");
     }
     document.write("</td>");
     document.write("</tr>");
@@ -53,5 +57,15 @@ vG1.push(new vertice(9, "AZ", 0, 0, "No asignado", [5, 7, 8, 10]));
 vG1.push(new vertice(10, "NM", 0, 0, "No asignado", [6, 9]));
 
 var g1 = new grafo(vG1, "<p>Grafo generado caso 1:<p><br>");
+
+mostrarGrafo(g1);
+
+document.write("<br><p>Coloreado de nodos:</p><br>");
+
+//generamos el nuevo grafo ordenado
+
+g1 = new grafo(this.g1.v.sort(((a, b) => b.grado - a.grado)), "");
+
+agregarGradoError(g1);
 
 mostrarGrafo(g1);
