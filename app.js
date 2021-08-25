@@ -35,7 +35,17 @@ function coloreadoGrafo(g){
       //grado de nodo + # de vertices adyacentes con igual o mayor grado
       g.v[i].gradoError = g.v[i].grado;
       //ciclo para nodos adyacentes y su grado de error
-      //for()
+      //sacar lista adyacente
+      for(var j = 0; j < g.v[i].ady.length; j++){
+        //console.log(g.v[i].ady[j]);
+        var aux = g.v[i].ady[j];//valor de la lista de adyacencia
+        for(var k = 0; k < g.v.length; k++){
+          //si el nodo del valor de la lista de adyacencia tiene mayor o igual grado sumar
+          if(g.v[k].id_nodo == aux && g.v[k].grado >= g.v[i].grado) g.v[i].gradoError += 1;
+        }
+        //fin de lista de adyacencia
+      }
+      //fin de nodo
     }
     else{
       console.log("Nodo diferente a los demas: " + g.v[i].grado);
